@@ -10,9 +10,12 @@ import UIKit
 
 class RecommendationViewController: UIViewController {
 
+    
+    // MARK - Outlets
+    
+    @IBOutlet var regionTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
     
@@ -26,5 +29,7 @@ class RecommendationViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    
 }
+
+
