@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uBn-jn-KT7">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Selection View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController title="Selection View Controller" id="BYZ-38-t0r" customClass="SelectionViewController" customModule="EatMudHo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="開餐" image="tuningfork" catalog="system" selectedImage="tuningfork" id="UlA-gb-HEi"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="229" y="31"/>
+        </scene>
+        <!--Analysis View Controller-->
+        <scene sceneID="B48-L6-Mya">
+            <objects>
+                <viewController title="Analysis View Controller" id="cof-Lv-kZO" customClass="AnalysisViewController" customModule="EatMudHo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="j4F-BZ-6dA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="oMY-MW-O68"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="分析" image="chart.bar.fill" catalog="system" selectedImage="chart.bar.fill" id="TnF-3j-Xq3"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UCa-vR-6Uf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="230" y="788"/>
+        </scene>
+        <!--推薦-->
+        <scene sceneID="TfO-tr-ZGz">
+            <objects>
+                <viewController id="xQd-x4-tdd" customClass="RecommendationViewController" customModule="EatMudHo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="feE-fO-NhA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="wfU-lb-gQR" userLabel="Main Stack View">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="recommendFrame" translatesAutoresizingMaskIntoConstraints="NO" id="Ep5-yR-fUb">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="ePv-Jh-LGG"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Dv6-qh-wk4" userLabel="今日推介 Stack View">
+                                        <rect key="frame" x="15" y="120" width="345" height="138"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="今日推介" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="a0A-7Q-GhQ">
+                                                <rect key="frame" x="0.0" y="0.0" width="101.5" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="bNX-Y0-Xlj" userLabel="Image Stack View">
+                                                <rect key="frame" x="0.0" y="38" width="345" height="100"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="79r-i9-rZZ">
+                                                        <rect key="frame" x="0.0" y="0.0" width="109.5" height="100"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="T1o-Eh-P2S">
+                                                        <rect key="frame" x="117.5" y="0.0" width="110" height="100"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CJL-Jm-s3o">
+                                                        <rect key="frame" x="235.5" y="0.0" width="109.5" height="100"/>
+                                                    </imageView>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="100" id="eO8-B3-ay3"/>
+                                                    <constraint firstItem="T1o-Eh-P2S" firstAttribute="centerX" secondItem="bNX-Y0-Xlj" secondAttribute="centerX" id="y36-G8-nA8"/>
+                                                </constraints>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="vRb-0L-ndq" userLabel="區推介 Stack View">
+                                        <rect key="frame" x="15" y="278" width="345" height="389"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="otF-La-weC">
+                                                <rect key="frame" x="0.0" y="0.0" width="345" height="389"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="151" translatesAutoresizingMaskIntoConstraints="NO" id="eEP-iI-DKN">
+                                                        <rect key="frame" x="0.0" y="0.0" width="345" height="20.5"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="九龍區 Top 3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="26r-kq-SH4">
+                                                                <rect key="frame" x="0.0" y="0.0" width="107" height="20.5"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="其他地區？" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="eAd-Tq-IxE">
+                                                                <rect key="frame" x="258" y="0.0" width="87" height="20.5"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <color key="textColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="JwD-hB-Tca">
+                                                        <rect key="frame" x="0.0" y="40.5" width="345" height="348.5"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                        <prototypes>
+                                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="fYR-cT-WnH">
+                                                                <rect key="frame" x="0.0" y="28" width="345" height="43.5"/>
+                                                                <autoresizingMask key="autoresizingMask"/>
+                                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fYR-cT-WnH" id="KUv-c5-238">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="345" height="43.5"/>
+                                                                    <autoresizingMask key="autoresizingMask"/>
+                                                                </tableViewCellContentView>
+                                                            </tableViewCell>
+                                                        </prototypes>
+                                                    </tableView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="vRb-0L-ndq" firstAttribute="leading" secondItem="wfU-lb-gQR" secondAttribute="leading" constant="15" id="DJW-yM-OKT"/>
+                                    <constraint firstItem="Dv6-qh-wk4" firstAttribute="leading" secondItem="wfU-lb-gQR" secondAttribute="leading" constant="15" id="dkz-aa-qhz"/>
+                                    <constraint firstItem="Ep5-yR-fUb" firstAttribute="top" secondItem="wfU-lb-gQR" secondAttribute="top" id="oIV-A7-i3l"/>
+                                    <constraint firstAttribute="trailing" secondItem="vRb-0L-ndq" secondAttribute="trailing" constant="15" id="oMF-nR-EOd"/>
+                                    <constraint firstAttribute="trailing" secondItem="Dv6-qh-wk4" secondAttribute="trailing" constant="15" id="rcW-Dn-Jza"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="wfU-lb-gQR" firstAttribute="leading" secondItem="6Gx-uf-yfv" secondAttribute="leading" id="T65-Ti-U1h"/>
+                            <constraint firstItem="wfU-lb-gQR" firstAttribute="top" secondItem="feE-fO-NhA" secondAttribute="top" id="g3n-WP-KXd"/>
+                            <constraint firstAttribute="bottom" secondItem="wfU-lb-gQR" secondAttribute="bottom" id="gFS-Lq-AXj"/>
+                            <constraint firstAttribute="trailing" secondItem="wfU-lb-gQR" secondAttribute="trailing" id="wvj-rX-eRt"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Gx-uf-yfv"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="推薦" image="tray.fill" catalog="system" selectedImage="tray.fill" id="3rz-Dw-CNb"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2m1-fN-kEc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="228.98550724637684" y="-721.20535714285711"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="KXk-05-bIG">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="uBn-jn-KT7" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="alO-2w-0Q7">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="1" green="0.64705882349999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="selectedImageTintColor" red="1" green="0.64705882349999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="xQd-x4-tdd" kind="relationship" relationship="viewControllers" id="CQd-PV-JnH"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="fmT-Fa-9U3"/>
+                        <segue destination="cof-Lv-kZO" kind="relationship" relationship="viewControllers" id="1g5-Fd-hkK"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hJ3-5Y-8Xh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1255" y="11"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="chart.bar.fill" catalog="system" width="128" height="89"/>
+        <image name="recommendFrame" width="800" height="296"/>
+        <image name="tray.fill" catalog="system" width="128" height="88"/>
+        <image name="tuningfork" catalog="system" width="128" height="116"/>
+    </resources>
+</document>
