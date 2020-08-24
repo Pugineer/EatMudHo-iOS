@@ -2,18 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:/Users/chris/Desktop/Projects/EatMudHo-iOS/EatMudHo/Controller/AnalysisViewController.swift">
-   </FileRef>
-   <FileRef
-      location = "group:/Users/chris/Desktop/Projects/EatMudHo-iOS/EatMudHo/Controller/SelectionViewController.swift">
-   </FileRef>
-   <FileRef
-      location = "group:autofill">
-   </FileRef>
-   <FileRef
-      location = "group:../../../../../Chris/Desktop/Projects">
-   </FileRef>
-   <FileRef
       location = "self:">
    </FileRef>
 </Workspace>

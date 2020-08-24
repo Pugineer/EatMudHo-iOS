@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		831E692224F2F63700F03EFC /* SelectTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831E692124F2F63700F03EFC /* SelectTimeViewController.swift */; };
 		83A6D9A624F2991000046229 /* AnalysisViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A6D9A424F2991000046229 /* AnalysisViewController.swift */; };
-		83A6D9A724F2991000046229 /* SelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A6D9A524F2991000046229 /* SelectionViewController.swift */; };
+		83A6D9A724F2991000046229 /* SelectLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A6D9A524F2991000046229 /* SelectLocationViewController.swift */; };
 		83A6D9AD24F2A43D00046229 /* RecommendationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A6D9AC24F2A43D00046229 /* RecommendationViewController.swift */; };
 		83A6D9B024F2B49500046229 /* RegionRecommendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A6D9AE24F2B49500046229 /* RegionRecommendTableViewCell.swift */; };
 		83A6D9B124F2B49500046229 /* RegionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83A6D9AF24F2B49500046229 /* RegionTableViewCell.xib */; };
@@ -21,8 +22,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		831E692124F2F63700F03EFC /* SelectTimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SelectTimeViewController.swift; path = "../../../../../../Chris/Desktop/Projects/EatMudHo-iOS/EatMudHo/Controller/SelectTimeViewController.swift"; sourceTree = "<group>"; };
 		83A6D9A424F2991000046229 /* AnalysisViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AnalysisViewController.swift; path = "../../../../../../Chris/Desktop/Projects/EatMudHo-iOS/EatMudHo/Controller/AnalysisViewController.swift"; sourceTree = "<group>"; };
-		83A6D9A524F2991000046229 /* SelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SelectionViewController.swift; path = "../../../../../../Chris/Desktop/Projects/EatMudHo-iOS/EatMudHo/Controller/SelectionViewController.swift"; sourceTree = "<group>"; };
+		83A6D9A524F2991000046229 /* SelectLocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SelectLocationViewController.swift; path = "../../../../../../Chris/Desktop/Projects/EatMudHo-iOS/EatMudHo/Controller/SelectLocationViewController.swift"; sourceTree = "<group>"; };
 		83A6D9AC24F2A43D00046229 /* RecommendationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RecommendationViewController.swift; path = "../../../../../../Chris/Desktop/Projects/EatMudHo-iOS/EatMudHo/Controller/RecommendationViewController.swift"; sourceTree = "<group>"; };
 		83A6D9AE24F2B49500046229 /* RegionRecommendTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RegionRecommendTableViewCell.swift; path = "../../../../../../Chris/Desktop/Projects/EatMudHo-iOS/EatMudHo/View/RegionRecommendTableViewCell.swift"; sourceTree = "<group>"; };
 		83A6D9AF24F2B49500046229 /* RegionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = RegionTableViewCell.xib; path = "../../../../../../Chris/Desktop/Projects/EatMudHo-iOS/EatMudHo/View/RegionTableViewCell.xib"; sourceTree = "<group>"; };
@@ -61,7 +63,8 @@
 			isa = PBXGroup;
 			children = (
 				83A6D9A424F2991000046229 /* AnalysisViewController.swift */,
-				83A6D9A524F2991000046229 /* SelectionViewController.swift */,
+				83A6D9A524F2991000046229 /* SelectLocationViewController.swift */,
+				831E692124F2F63700F03EFC /* SelectTimeViewController.swift */,
 				83A6D9AC24F2A43D00046229 /* RecommendationViewController.swift */,
 			);
 			path = Controller;
@@ -178,13 +181,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				83A6D9A724F2991000046229 /* SelectionViewController.swift in Sources */,
+				83A6D9A724F2991000046229 /* SelectLocationViewController.swift in Sources */,
 				83A8C8C324F283CB007B02BA /* AppDelegate.swift in Sources */,
 				83A6D9B024F2B49500046229 /* RegionRecommendTableViewCell.swift in Sources */,
 				83A6D9AD24F2A43D00046229 /* RecommendationViewController.swift in Sources */,
 				83A6D9B324F2B68600046229 /* Constants.swift in Sources */,
 				83A8C8C524F283CB007B02BA /* SceneDelegate.swift in Sources */,
 				83A6D9A624F2991000046229 /* AnalysisViewController.swift in Sources */,
+				831E692224F2F63700F03EFC /* SelectTimeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
