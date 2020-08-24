@@ -12,6 +12,7 @@ class SelectLocationViewController: UIViewController, CLLocationManagerDelegate 
     
     var locationManager = CLLocationManager()
     var currentLocation: CLLocation!
+    var apiRequestHandler = APIRequestHandler()
     override func viewDidLoad() {
         super.viewDidLoad()
         locationManager.delegate = self
@@ -30,23 +31,27 @@ class SelectLocationViewController: UIViewController, CLLocationManagerDelegate 
                 return
             }
             locationManager.stopUpdatingLocation()
-            print(currentLocation.coordinate.latitude)
-            print(currentLocation.coordinate.longitude)
-            performSegue(withIdentifier: Constants.currentLocationToWhenSegue, sender: self)
+            let latitude = currentLocation.coordinate.latitude
+            let longitude = currentLocation.coordinate.longitude
+            apiRequestHandler.setLocation(with: latitude, longitude)
+            performSegue(withIdentifier: Constants.locToTimeSegue, sender: self)
+            
+            
         }
         else if CLLocationManager.authorizationStatus() == .denied {
             print("Denined")
         }
     }
     
-    /*
      // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == Constants.locToTimeSegue {
+            let destVC = segue.destination as! SelectTimeViewController
+            destVC.apiRequestHandler = apiRequestHandler
+            
+        }
      // Get the new view controller using segue.destination.
      // Pass the selected object to the new view controller.
      }
-     */
     
 }

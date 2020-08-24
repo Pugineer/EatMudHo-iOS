@@ -11,5 +11,8 @@ import Foundation
 struct Constants {
     static let regionTableCellReuseIdentifier = "regionTableCell"
     static let regionTableCellNib = "RegionTableViewCell"
-    static let currentLocationToWhenSegue = "CurrentToWhen"
+    static let locToTimeSegue = "LocToTime"
+    static let timeToTypeSegue = "TimeToType"
+    static let typeToLoadingSegue = "TypeToLoading"
+    static let loadingToResultSegue = "LoadingToResult"
 }

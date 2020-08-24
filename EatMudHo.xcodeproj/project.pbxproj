@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		831E692224F2F63700F03EFC /* SelectTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831E692124F2F63700F03EFC /* SelectTimeViewController.swift */; };
+		8323CBAA24F3C660000C1E97 /* SelectTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8323CBA924F3C65F000C1E97 /* SelectTypeViewController.swift */; };
+		8323CBAC24F3C795000C1E97 /* LoadingResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8323CBAB24F3C795000C1E97 /* LoadingResultViewController.swift */; };
+		8323CBAE24F3C7A0000C1E97 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8323CBAD24F3C7A0000C1E97 /* ResultViewController.swift */; };
+		8323CBB024F3CC2B000C1E97 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8323CBAF24F3CC2B000C1E97 /* APIRequest.swift */; };
+		8323CBB224F3CD26000C1E97 /* APIRequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8323CBB124F3CD26000C1E97 /* APIRequestHandler.swift */; };
+		8355E45724F3EFBE00E954E1 /* SearchRestaurantModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8355E45624F3EFBE00E954E1 /* SearchRestaurantModel.swift */; };
 		83A6D9A624F2991000046229 /* AnalysisViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A6D9A424F2991000046229 /* AnalysisViewController.swift */; };
 		83A6D9A724F2991000046229 /* SelectLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A6D9A524F2991000046229 /* SelectLocationViewController.swift */; };
 		83A6D9AD24F2A43D00046229 /* RecommendationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A6D9AC24F2A43D00046229 /* RecommendationViewController.swift */; };
@@ -23,6 +29,12 @@
 
 /* Begin PBXFileReference section */
 		831E692124F2F63700F03EFC /* SelectTimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SelectTimeViewController.swift; path = "../../../../../../Chris/Desktop/Projects/EatMudHo-iOS/EatMudHo/Controller/SelectTimeViewController.swift"; sourceTree = "<group>"; };
+		8323CBA924F3C65F000C1E97 /* SelectTypeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SelectTypeViewController.swift; path = "../../../../../../Chris/Desktop/Projects/EatMudHo-iOS/EatMudHo/Controller/SelectTypeViewController.swift"; sourceTree = "<group>"; };
+		8323CBAB24F3C795000C1E97 /* LoadingResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoadingResultViewController.swift; path = "../../../../../../Chris/Desktop/Projects/EatMudHo-iOS/EatMudHo/Controller/LoadingResultViewController.swift"; sourceTree = "<group>"; };
+		8323CBAD24F3C7A0000C1E97 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ResultViewController.swift; path = "../../../../../../Chris/Desktop/Projects/EatMudHo-iOS/EatMudHo/Controller/ResultViewController.swift"; sourceTree = "<group>"; };
+		8323CBAF24F3CC2B000C1E97 /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = APIRequest.swift; path = "../../../../../../Chris/Desktop/Projects/EatMudHo-iOS/EatMudHo/Model/APIRequest.swift"; sourceTree = "<group>"; };
+		8323CBB124F3CD26000C1E97 /* APIRequestHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = APIRequestHandler.swift; path = "../../../../../../Chris/Desktop/Projects/EatMudHo-iOS/EatMudHo/Model/APIRequestHandler.swift"; sourceTree = "<group>"; };
+		8355E45624F3EFBE00E954E1 /* SearchRestaurantModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SearchRestaurantModel.swift; path = "../../../../../../Chris/Desktop/Projects/EatMudHo-iOS/EatMudHo/Model/SearchRestaurantModel.swift"; sourceTree = "<group>"; };
 		83A6D9A424F2991000046229 /* AnalysisViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AnalysisViewController.swift; path = "../../../../../../Chris/Desktop/Projects/EatMudHo-iOS/EatMudHo/Controller/AnalysisViewController.swift"; sourceTree = "<group>"; };
 		83A6D9A524F2991000046229 /* SelectLocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SelectLocationViewController.swift; path = "../../../../../../Chris/Desktop/Projects/EatMudHo-iOS/EatMudHo/Controller/SelectLocationViewController.swift"; sourceTree = "<group>"; };
 		83A6D9AC24F2A43D00046229 /* RecommendationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RecommendationViewController.swift; path = "../../../../../../Chris/Desktop/Projects/EatMudHo-iOS/EatMudHo/Controller/RecommendationViewController.swift"; sourceTree = "<group>"; };
@@ -65,7 +77,10 @@
 				83A6D9A424F2991000046229 /* AnalysisViewController.swift */,
 				83A6D9A524F2991000046229 /* SelectLocationViewController.swift */,
 				831E692124F2F63700F03EFC /* SelectTimeViewController.swift */,
+				8323CBA924F3C65F000C1E97 /* SelectTypeViewController.swift */,
 				83A6D9AC24F2A43D00046229 /* RecommendationViewController.swift */,
+				8323CBAB24F3C795000C1E97 /* LoadingResultViewController.swift */,
+				8323CBAD24F3C7A0000C1E97 /* ResultViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -73,6 +88,9 @@
 		834ADC0024F28CC5000749D0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				8323CBAF24F3CC2B000C1E97 /* APIRequest.swift */,
+				8323CBB124F3CD26000C1E97 /* APIRequestHandler.swift */,
+				8355E45624F3EFBE00E954E1 /* SearchRestaurantModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -183,12 +201,18 @@
 			files = (
 				83A6D9A724F2991000046229 /* SelectLocationViewController.swift in Sources */,
 				83A8C8C324F283CB007B02BA /* AppDelegate.swift in Sources */,
+				8355E45724F3EFBE00E954E1 /* SearchRestaurantModel.swift in Sources */,
 				83A6D9B024F2B49500046229 /* RegionRecommendTableViewCell.swift in Sources */,
+				8323CBAA24F3C660000C1E97 /* SelectTypeViewController.swift in Sources */,
+				8323CBAC24F3C795000C1E97 /* LoadingResultViewController.swift in Sources */,
 				83A6D9AD24F2A43D00046229 /* RecommendationViewController.swift in Sources */,
 				83A6D9B324F2B68600046229 /* Constants.swift in Sources */,
 				83A8C8C524F283CB007B02BA /* SceneDelegate.swift in Sources */,
 				83A6D9A624F2991000046229 /* AnalysisViewController.swift in Sources */,
 				831E692224F2F63700F03EFC /* SelectTimeViewController.swift in Sources */,
+				8323CBB024F3CC2B000C1E97 /* APIRequest.swift in Sources */,
+				8323CBB224F3CD26000C1E97 /* APIRequestHandler.swift in Sources */,
+				8323CBAE24F3C7A0000C1E97 /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
