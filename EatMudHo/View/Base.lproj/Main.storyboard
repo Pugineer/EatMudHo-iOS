@@ -307,38 +307,60 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="你想食乜？" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Qv-Ch-7oL">
-                                <rect key="frame" x="131" y="154" width="127" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ti-On-bbS">
-                                <rect key="frame" x="146" y="317" width="97" height="51"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <state key="normal" title="日本菜"/>
-                                <connections>
-                                    <action selector="jpBtnPressed:" destination="k7O-rJ-3xe" eventType="touchUpInside" id="Ty0-iS-T1q"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XLP-ZD-I7I">
-                                <rect key="frame" x="142" y="652" width="107" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
-                                <state key="normal" title="Generate"/>
-                                <connections>
-                                    <action selector="generateBtnPressed:" destination="k7O-rJ-3xe" eventType="touchUpInside" id="UEB-UB-pLT"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="mga-Pb-690">
+                                <rect key="frame" x="143.66666666666666" y="214" width="126.66666666666666" height="468"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="你想食乜？" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Qv-Ch-7oL">
+                                        <rect key="frame" x="0.0" y="0.0" width="126.66666666666667" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ti-On-bbS">
+                                        <rect key="frame" x="0.0" y="90" width="126.66666666666667" height="51"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                        <state key="normal" title="日本菜"/>
+                                        <connections>
+                                            <action selector="btnPressed:" destination="k7O-rJ-3xe" eventType="touchUpInside" id="I5L-lt-g8F"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zPv-fy-O7T">
+                                        <rect key="frame" x="0.0" y="201" width="126.66666666666667" height="51"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                        <state key="normal" title="亞洲菜"/>
+                                        <connections>
+                                            <action selector="btnPressed:" destination="k7O-rJ-3xe" eventType="touchUpInside" id="Y6u-EV-7Gf"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nys-4b-fpN">
+                                        <rect key="frame" x="0.0" y="312" width="126.66666666666667" height="51"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                        <state key="normal" title="廣東菜"/>
+                                        <connections>
+                                            <action selector="btnPressed:" destination="k7O-rJ-3xe" eventType="touchUpInside" id="xuO-1g-gwr"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XLP-ZD-I7I">
+                                        <rect key="frame" x="0.0" y="423" width="126.66666666666667" height="45"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                        <state key="normal" title="Generate"/>
+                                        <connections>
+                                            <action selector="generateBtnPressed:" destination="k7O-rJ-3xe" eventType="touchUpInside" id="UEB-UB-pLT"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="mga-Pb-690" firstAttribute="centerY" secondItem="hkI-sk-iCr" secondAttribute="centerY" id="jNg-Np-rSh"/>
+                            <constraint firstItem="mga-Pb-690" firstAttribute="centerX" secondItem="hkI-sk-iCr" secondAttribute="centerX" id="lVh-JS-ZbT"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Cw7-C1-xNk"/>
                     </view>
                     <navigationItem key="navigationItem" id="3DI-uO-3I3"/>
                     <connections>
-                        <segue destination="91M-Sv-TXE" kind="presentation" identifier="TypeToLoading" modalPresentationStyle="currentContext" id="RCe-OA-BEm"/>
+                        <segue destination="91M-Sv-TXE" kind="show" identifier="TypeToLoading" id="RCe-OA-BEm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tiT-A3-Aze" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -353,20 +375,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Loading" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E7r-fs-J4d">
-                                <rect key="frame" x="155" y="319" width="104" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="幫緊你 幫緊你" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E7r-fs-J4d">
+                                <rect key="frame" x="35" y="138" width="344" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="E7r-fs-J4d" firstAttribute="top" secondItem="o5g-ja-Zh3" secondAttribute="top" constant="50" id="0pb-pb-hn8"/>
+                            <constraint firstItem="E7r-fs-J4d" firstAttribute="leading" secondItem="csU-Yq-XaG" secondAttribute="leading" constant="35" id="cgn-iA-8b5"/>
+                            <constraint firstAttribute="trailing" secondItem="E7r-fs-J4d" secondAttribute="trailing" constant="35" id="dvb-58-v8o"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="o5g-ja-Zh3"/>
                     </view>
                     <navigationItem key="navigationItem" id="pca-Sc-xuF"/>
                     <connections>
-                        <segue destination="o3W-TP-dOu" kind="presentation" identifier="LoadingToResult" modalPresentationStyle="fullScreen" id="BzL-Lp-CJ9"/>
+                        <segue destination="o3W-TP-dOu" kind="presentation" identifier="LoadingToResult" modalPresentationStyle="currentContext" id="BzL-Lp-CJ9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G5i-4Y-BEm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -380,9 +406,25 @@
                     <view key="view" contentMode="scaleToFill" id="1fG-rx-jVA">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Testing" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kN0-CF-ZDV">
+                                <rect key="frame" x="35" y="144" width="344" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="kN0-CF-ZDV" secondAttribute="trailing" constant="35" id="2Jj-Zk-NuQ"/>
+                            <constraint firstItem="kN0-CF-ZDV" firstAttribute="leading" secondItem="1fG-rx-jVA" secondAttribute="leading" constant="35" id="O5M-cZ-fDJ"/>
+                            <constraint firstItem="kN0-CF-ZDV" firstAttribute="top" secondItem="aXA-Ez-NSY" secondAttribute="top" constant="100" id="vKB-Li-zvH"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="aXA-Ez-NSY"/>
                     </view>
+                    <connections>
+                        <outlet property="restaurantTextLabel" destination="kN0-CF-ZDV" id="Znj-L5-3JS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6sq-kP-dyc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

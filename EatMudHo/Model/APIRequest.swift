@@ -12,5 +12,7 @@ struct APIRequest {
     var latitude: Double?
     var longitude: Double?
     var time: Int?
-    var type: Array<String>?
+    var category: Array<String>? = []
+    var mode: String?
+    
 }

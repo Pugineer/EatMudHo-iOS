@@ -19,13 +19,13 @@ class SelectTypeViewController: UIViewController {
     }
     
 
-    @IBAction func jpBtnPressed(_ sender: UIButton) {
-        foodType.append("Japanese Restaurant")
-        apiRequestHandler?.setType(with: foodType)
-        performSegue(withIdentifier: Constants.typeToLoadingSegue, sender: self)
+    @IBAction func btnPressed(_ sender: UIButton) {
+        apiRequestHandler?.addStringToType(with: (sender.titleLabel?.text)!)
     }
+    
     @IBAction func generateBtnPressed(_ sender: UIButton) {
-        
+        apiRequestHandler?.setMode()
+        performSegue(withIdentifier: Constants.typeToLoadingSegue, sender: self) 
         
     }
     

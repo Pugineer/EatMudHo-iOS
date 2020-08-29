@@ -15,6 +15,7 @@ class SelectLocationViewController: UIViewController, CLLocationManagerDelegate 
     var apiRequestHandler = APIRequestHandler()
     override func viewDidLoad() {
         super.viewDidLoad()
+        tabBarController?.delegate = self
         locationManager.delegate = self
         locationManager.startUpdatingLocation()
         // Do any additional setup after loadin g the view.
@@ -54,4 +55,10 @@ class SelectLocationViewController: UIViewController, CLLocationManagerDelegate 
      // Pass the selected object to the new view controller.
      }
     
+}
+
+extension SelectLocationViewController: UITabBarControllerDelegate {
+    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
+         navigationController?.popToRootViewController(animated: true)
+    }
 }

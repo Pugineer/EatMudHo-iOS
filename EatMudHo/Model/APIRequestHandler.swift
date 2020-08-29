@@ -9,12 +9,12 @@
 import Foundation
 
 protocol APIRequestHandlerDelegate {
-    func didFinishGeneratingData(data: SearchRestaurantModel)
+    func didFinishGeneratingData(data: Array<SearchRestaurantModel>?)
 }
 struct APIRequestHandler {
     var apiRequest = APIRequest()
     var delegate : APIRequestHandlerDelegate?
-    
+    // MARK: - Get Set Methods
     mutating func setLocation(with latitude: Double, _ longitude: Double) {
         apiRequest.latitude = latitude
         apiRequest.longitude = longitude
@@ -24,62 +24,97 @@ struct APIRequestHandler {
         apiRequest.time = time
     }
     
-    mutating func setType(with type: Array<String>) {
-        apiRequest.type = type
+    mutating func addStringToType(with string: String) {
+        let categoryID = translateStringToCategoryID(with: string)
+        apiRequest.category?.append(categoryID)
     }
     
-    func typeToCategoryID(with type: String) -> String{
-        var typeString = ""
-        switch type {
-        case "Japanese Restaurant":
-            typeString = "4bf58dd8d48988d111941735"
+    mutating func setMode() {
+        if apiRequest.category!.count == 1 {
+            apiRequest.mode = "Single"
+        }
+        else if apiRequest.category!.count == 3 {
+            apiRequest.mode = "Multi"
+        }
+    }
+    
+    func getMode() -> String? {
+        return apiRequest.mode
+    }
+    
+    // MARK: - API fetching
+    func translateStringToCategoryID(with string: String) -> String {
+        var categoryID = ""
+        switch string {
+        case "日本菜":
+            categoryID = Constants.CategoryID.japaneseRestaurant
+            break
+        case "廣東菜":
+            categoryID = Constants.CategoryID.cantoneseRestaurant
+            break
+        case "亞洲菜":
+            categoryID = Constants.CategoryID.asianRestaurant
             break
         default:
             break
         }
-        return typeString
+        return categoryID
     }
     
-    func handlingURLString() -> String {
+    func createURLString(categoryID: String?, limit: Int, radius: Int) -> String {
         guard let latitude = apiRequest.latitude else {
             fatalError("Latitude is nil.")
         }
         guard let longitude = apiRequest.longitude else {
             fatalError("Longitude is nil.")
         }
-        let time = apiRequest.time
-        let type = apiRequest.type
-        var typeString = ""
-        if type?.count == 1 {
-            typeString = typeToCategoryID(with: (type?.first)!)
+        guard let categoryID = categoryID else {
+            fatalError("CategoryID is nil.")
         }
-        else {
-            
-        }
-        let llString = "\(latitude),\(longitude)"
-        let limitString = 50
-        let radius = 2500
-        var urlString = "https://api.foursquare.com/v2/venues/search?&client_id=TKN4AJFGMFBKMG05NERVAEPW44SBLXBE5XGQG2HCYATUJQKA&client_secret=G1KNKIJYWDYW1HTDU144KU3KJDCRUTAJ2ID0GILSFA2HBEFG&ll=\(llString)&categoryId=\(typeString)&v=20200823&limit=\(limitString)&radius=\(radius)"
+        let urlString = "https://api.foursquare.com/v2/venues/search?&client_id=TKN4AJFGMFBKMG05NERVAEPW44SBLXBE5XGQG2HCYATUJQKA&client_secret=G1KNKIJYWDYW1HTDU144KU3KJDCRUTAJ2ID0GILSFA2HBEFG&ll=\(latitude),\(longitude)&categoryId=\(categoryID)&v=20200823&limit=\(limit)&radius=\(radius)"
         return urlString
     }
     
-    func performRequest() {
-        let urlString = handlingURLString()
+    func performRequest(urlString: String) -> SearchRestaurantModel? {
+        var resultData: SearchRestaurantModel?
         if let url = URL(string: urlString) {
-            let session = URLSession(configuration: .default)
-            let task = session.dataTask(with: url) { (data, response, error) in
+            let sem = DispatchSemaphore.init(value: 0)
+            let session = URLSession(configuration: URLSessionConfiguration.default)
+            let task = session.dataTask(with: url) { (data, response, error) in defer {sem.signal()}
                 if error != nil {
                     fatalError("fetching data error.")
                 }
-                
                 if let safeData = data {
-                    if let restaurantData = self.parseJson(data: safeData) {
-                        self.delegate?.didFinishRetrievingData(data: restaurantData)
-                    }
-            
+                    resultData = self.parseJson(data: safeData)
                 }
             }
             task.resume()
+            sem.wait()
+            return resultData
+        }
+        else {
+            return nil
+        }
+    }
+    
+    func generateResult() {
+        DispatchQueue.global(qos: .background).async {
+            var resultArray: Array<SearchRestaurantModel> = []
+            if self.apiRequest.mode == "Single" {
+                let urlString = self.createURLString(categoryID: self.apiRequest.category?.first, limit: 50, radius: 2500)
+                let result = self.performRequest(urlString: urlString)
+                resultArray.append(result!)
+                self.delegate?.didFinishGeneratingData(data: resultArray)
+            }
+            else if self.apiRequest.mode == "Multi" {
+                for item in 0...2 {
+                    let urlString = self.createURLString(categoryID: self.apiRequest.category?[item], limit: 50, radius: 2500)
+                    let result = self.performRequest(urlString: urlString)
+                    resultArray.append(result!)
+                }
+                self.delegate?.didFinishGeneratingData(data: resultArray)
+            }
+            
         }
     }
     
@@ -95,4 +130,6 @@ struct APIRequestHandler {
             return nil
         }
     }
+    
+    
 }
