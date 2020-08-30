@@ -23,6 +23,7 @@ class SelectLocationViewController: UIViewController, CLLocationManagerDelegate 
     
     // MARK: IBAction
     @IBAction func currentBtnPressed(_ sender: UIButton) {
+      
         if CLLocationManager.authorizationStatus() == .notDetermined {
             locationManager.requestWhenInUseAuthorization()
         }
@@ -31,6 +32,7 @@ class SelectLocationViewController: UIViewController, CLLocationManagerDelegate 
             guard let currentLocation = locationManager.location else {
                 return
             }
+              print("Testing")
             locationManager.stopUpdatingLocation()
             let latitude = currentLocation.coordinate.latitude
             let longitude = currentLocation.coordinate.longitude

@@ -22,4 +22,19 @@ struct Constants {
         static let cantoneseRestaurant = "52af3a7c3cf9994f4e043bed"
         static let asianRestaurant = "4bf58dd8d48988d142941735"
     }
+    
+    struct Database {
+        static let collectionName = "Restaurant"
+        
+        static let idField = "ID"
+        static let nameField = "Name"
+        static let phoneField = "Phone"
+        static let categoriesField = "Categories"
+        static let addressField = "Address"
+        static let ratingField = "Rating"
+        static let timeField = "Opening"
+        static let daysField = "Days"
+        
+    }
+
 }

@@ -14,5 +14,4 @@ struct APIRequest {
     var time: Int?
     var category: Array<String>? = []
     var mode: String?
-    
 }

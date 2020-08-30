@@ -118,7 +118,7 @@ struct APIRequestHandler {
         }
     }
     
-    func parseJson(data: Data) -> SearchRestaurantModel? {
+    private func parseJson(data: Data) -> SearchRestaurantModel? {
         let decoder = JSONDecoder()
         do {
             let decodedData = try decoder.decode(SearchRestaurantModel.self, from: data)

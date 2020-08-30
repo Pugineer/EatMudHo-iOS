@@ -12,6 +12,7 @@ class ResultViewController: UIViewController {
     
     @IBOutlet var restaurantTextLabel: UILabel!
     var apiRequestHandler: APIRequestHandler?
+    var dbHandler = DBHandler()
     var data: Array<SearchRestaurantModel>?
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,10 +21,12 @@ class ResultViewController: UIViewController {
     }
     
     func randomGeneration() {
+        var restaurantID: String?
         if apiRequestHandler?.getMode() == "Single" {
             if let totalNum = data?.first!.response.venues.count {
                 let randNum = Int.random(in: 0...totalNum-1)
                 restaurantTextLabel.text = data?.first!.response.venues[randNum].name
+                restaurantID = data?.first!.response.venues[randNum].id
             }
             else {
                 print("0 Venue founded.")
@@ -45,14 +48,28 @@ class ResultViewController: UIViewController {
             if let totalNum = data?[type].response.venues.count {
                 randNum = Int.random(in: 0...totalNum-1)
                 restaurantTextLabel.text = data?[type].response.venues[randNum].name
+                restaurantID = data?[type].response.venues[randNum].id
+            
             }
             else {
                 print("0 Venue founded")
             }
-            
         }
-        
+        else {
+            fatalError("Random Generation Error.")
+        }
+        dbHandler.setRestaurantID(with: restaurantID!)
+        let checkDB = dbHandler.checkDB()
+        if checkDB == nil {
+            dbHandler.fetchToDB()
+            print("This restaurant \(restaurantID!) is not found in the Database. Fetching.. ")
+        }
+        else {
+            print(checkDB?.categories as? String)
+            print("This restaurant \(restaurantID!) is found in the Database.")
+        }
     }
+    
     
     
     /*
