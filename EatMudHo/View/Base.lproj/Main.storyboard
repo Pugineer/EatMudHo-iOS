@@ -271,25 +271,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PCl-gb-de3">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PCl-gb-de3">
                                 <rect key="frame" x="50" y="555" width="275" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                 <state key="normal" title="Start GENERATE">
                                     <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 </state>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Breakfast" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="cGn-MU-uK0">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Breakfast" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="cGn-MU-uK0">
                                 <rect key="frame" x="100" y="54" width="175" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                                 <size key="shadowOffset" width="0.0" height="0.0"/>
                             </label>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceHorizontal="YES" pagingEnabled="YES" showsVerticalScrollIndicator="NO" indicatorStyle="black" canCancelContentTouches="NO" dataMode="prototypes" prefetchingEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ovd-6d-PDz">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceHorizontal="YES" pagingEnabled="YES" showsVerticalScrollIndicator="NO" contentInsetAdjustmentBehavior="scrollableAxes" indicatorStyle="black" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Ovd-6d-PDz">
                                 <rect key="frame" x="37.5" y="142" width="300" height="383"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="50" id="1ZR-or-8oP">
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="1ZR-or-8oP">
                                     <size key="itemSize" width="300" height="350"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -299,7 +302,7 @@
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="timeCell" id="cXs-6W-lcN" customClass="timeCollectionViewCell" customModule="EatMudHo" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="16.5" width="300" height="350"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="dF2-UN-FiE">
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" insetsLayoutMarginsFromSafeArea="NO" id="dF2-UN-FiE">
                                             <rect key="frame" x="0.0" y="0.0" width="300" height="350"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
@@ -308,13 +311,12 @@
                                                 </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="KFD-Iw-kbj" firstAttribute="leading" secondItem="dF2-UN-FiE" secondAttribute="leading" id="9Uv-fo-C4w"/>
-                                                <constraint firstAttribute="bottom" secondItem="KFD-Iw-kbj" secondAttribute="bottom" id="Rdh-eV-mRj"/>
-                                                <constraint firstAttribute="trailing" secondItem="KFD-Iw-kbj" secondAttribute="trailing" id="aQ6-oP-eOw"/>
-                                                <constraint firstItem="KFD-Iw-kbj" firstAttribute="top" secondItem="dF2-UN-FiE" secondAttribute="top" id="r27-gt-8Gg"/>
+                                                <constraint firstItem="KFD-Iw-kbj" firstAttribute="leading" secondItem="dF2-UN-FiE" secondAttribute="leading" id="0w6-5S-Zhp"/>
+                                                <constraint firstItem="KFD-Iw-kbj" firstAttribute="top" secondItem="dF2-UN-FiE" secondAttribute="top" id="637-rb-XEg"/>
+                                                <constraint firstAttribute="bottom" secondItem="KFD-Iw-kbj" secondAttribute="bottom" id="ZQQ-gV-p6a"/>
+                                                <constraint firstAttribute="trailing" secondItem="KFD-Iw-kbj" secondAttribute="trailing" id="usc-Uu-9SF"/>
                                             </constraints>
                                         </collectionViewCellContentView>
-                                        <size key="customSize" width="300" height="350"/>
                                         <connections>
                                             <outlet property="imageView" destination="KFD-Iw-kbj" id="wF3-b6-FER"/>
                                             <outlet property="textLabel" destination="cGn-MU-uK0" id="R8A-g0-Uum"/>
@@ -324,20 +326,6 @@
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="PCl-gb-de3" firstAttribute="leading" secondItem="QdB-qQ-u6e" secondAttribute="leading" constant="50" id="090-r4-t9u"/>
-                            <constraint firstItem="cGn-MU-uK0" firstAttribute="leading" secondItem="QdB-qQ-u6e" secondAttribute="leading" constant="100" id="4FU-IK-Ick"/>
-                            <constraint firstItem="Ovd-6d-PDz" firstAttribute="leading" secondItem="QdB-qQ-u6e" secondAttribute="leading" constant="37.5" id="BKL-sY-nZK"/>
-                            <constraint firstItem="Ovd-6d-PDz" firstAttribute="centerX" secondItem="Mrj-to-Dqu" secondAttribute="centerX" id="Gzl-Mt-lTt"/>
-                            <constraint firstItem="QdB-qQ-u6e" firstAttribute="trailing" secondItem="PCl-gb-de3" secondAttribute="trailing" constant="50" id="S0Y-5M-NKF"/>
-                            <constraint firstItem="Ovd-6d-PDz" firstAttribute="top" secondItem="cGn-MU-uK0" secondAttribute="bottom" constant="10" id="YOy-Fg-piH"/>
-                            <constraint firstItem="QdB-qQ-u6e" firstAttribute="bottom" secondItem="PCl-gb-de3" secondAttribute="bottom" constant="30" id="a5X-uB-faM"/>
-                            <constraint firstItem="Ovd-6d-PDz" firstAttribute="centerY" secondItem="Mrj-to-Dqu" secondAttribute="centerY" id="eWV-kF-fOy"/>
-                            <constraint firstItem="cGn-MU-uK0" firstAttribute="top" secondItem="QdB-qQ-u6e" secondAttribute="top" constant="10" id="foB-dS-YUe"/>
-                            <constraint firstItem="PCl-gb-de3" firstAttribute="top" secondItem="Ovd-6d-PDz" secondAttribute="bottom" constant="30" id="gK4-b8-9B1"/>
-                            <constraint firstItem="PCl-gb-de3" firstAttribute="centerX" secondItem="Mrj-to-Dqu" secondAttribute="centerX" id="pst-Zg-PC7"/>
-                            <constraint firstItem="QdB-qQ-u6e" firstAttribute="trailing" secondItem="cGn-MU-uK0" secondAttribute="trailing" constant="100" id="qQD-cY-fCz"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="QdB-qQ-u6e"/>
                     </view>
                     <navigationItem key="navigationItem" title="你想幾點食？" id="RUO-Oc-zJU"/>

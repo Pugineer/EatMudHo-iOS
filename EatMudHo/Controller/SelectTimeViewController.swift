@@ -8,8 +8,9 @@
 
 import UIKit
 import LNICoverFlowLayout
-class SelectTimeViewController: UIViewController, UICollectionViewDataSource {
+class SelectTimeViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
+    let sectionInsets = UIEdgeInsets(top: 50, left: 20, bottom: 50, right: 20)
     @IBOutlet var collectionView: UICollectionView!
     @IBOutlet var flowLayout: UICollectionViewFlowLayout!
     var apiRequestHandler: APIRequestHandler?
@@ -21,7 +22,6 @@ class SelectTimeViewController: UIViewController, UICollectionViewDataSource {
             PhotoModel(image: UIImage(named: Constants.Image.supperImage)!, imageDescription: "Supper"),
     ]
     
-    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         print(photoModelDatasource.count)
         return photoModelDatasource.count
@@ -30,6 +30,7 @@ class SelectTimeViewController: UIViewController, UICollectionViewDataSource {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.timeCellReuseIdentifier, for: indexPath) as! timeCollectionViewCell
         let photoModel = photoModelDatasource[indexPath.row]
