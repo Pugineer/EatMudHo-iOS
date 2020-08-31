@@ -65,7 +65,7 @@ class ResultViewController: UIViewController {
             print("This restaurant \(restaurantID!) is not found in the Database. Fetching.. ")
         }
         else {
-            print(checkDB?.categories as? String)
+            print(checkDB?.categories)
             print("This restaurant \(restaurantID!) is found in the Database.")
         }
     }

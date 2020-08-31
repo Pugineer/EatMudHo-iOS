@@ -17,4 +17,5 @@ struct DBModel {
     let rating: Double?
     let time: [String]?
     let days: String?
+    let photos: [String]?
 }

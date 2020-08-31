@@ -6,7 +6,6 @@ target 'EatMudHo' do
   use_frameworks!
 
   # Pods for EatMudHo
-pod 'Firebase'
 pod 'Firebase/Firestore'
-
+pod 'LNICoverFlowLayout'
 end

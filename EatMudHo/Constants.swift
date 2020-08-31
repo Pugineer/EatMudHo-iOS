@@ -15,7 +15,15 @@ struct Constants {
     static let timeToTypeSegue = "TimeToType"
     static let typeToLoadingSegue = "TypeToLoading"
     static let loadingToResultSegue = "LoadingToResult"
+    static let timeCellReuseIdentifier = "timeCell"
     
+    struct Image {
+        static let breakfastImage = "Breakfast"
+        static let lunchImage = "Lunch"
+        static let afternoonTeaImage = "AfternoonTea"
+        static let dinnerImage = "Dinner"
+        static let supperImage = "Supper"
+    }
     // MARK: - Restaurant Category ID
     struct CategoryID {
         static let japaneseRestaurant = "4bf58dd8d48988d111941735"
@@ -34,6 +42,8 @@ struct Constants {
         static let ratingField = "Rating"
         static let timeField = "Opening"
         static let daysField = "Days"
+        static let photoField = "Photos"
+        
         
     }
 

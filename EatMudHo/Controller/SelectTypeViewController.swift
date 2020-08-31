@@ -7,18 +7,19 @@
 //
 
 import UIKit
-
+import LNICoverFlowLayout
 class SelectTypeViewController: UIViewController {
-
+        
     var apiRequestHandler: APIRequestHandler?
-    var foodType: Array<String> = []
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         // Do any additional setup after loading the view.
     }
     
-
     @IBAction func btnPressed(_ sender: UIButton) {
         apiRequestHandler?.addStringToType(with: (sender.titleLabel?.text)!)
     }
@@ -33,8 +34,7 @@ class SelectTypeViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let destVC = segue.destination as! LoadingResultViewController
         destVC.apiRequestHandler = apiRequestHandler
-        
     }
     
-
+    
 }

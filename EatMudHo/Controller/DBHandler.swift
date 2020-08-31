@@ -38,13 +38,14 @@ struct DBHandler {
                         let rating = data[Constants.Database.ratingField] as? Double
                         let time = data[Constants.Database.timeField] as? [String]
                         let days = data[Constants.Database.daysField] as? String
-                        let newDBModel = DBModel(id: id, name: name, phone: phone, categories: categories, location: address, rating: rating, time: time, days: days)
+                        let photos = data[Constants.Database.photoField] as? [String]
+                        let newDBModel = DBModel(id: id, name: name, phone: phone, categories: categories, location: address, rating: rating, time: time, days: days, photos: photos)
                         dbModel = newDBModel
                     }
                 }
             }
         })
-        return dbModel
+        return nil
     }
     
     
@@ -63,7 +64,7 @@ struct DBHandler {
         let rating = data?.response.venue.rating ?? 0
         var time: Array<String> = []
         var days = ""
-        
+        var photos: Array<String> = []
         if let hours = data?.response.venue.hours {
             if hours.timeframes[0].open?.count ?? 0 > 1 {
                 let amTime = hours.timeframes[0].open?[0].renderedTime ?? ""
@@ -78,6 +79,14 @@ struct DBHandler {
             days = hours.timeframes[0].days ?? ""
         }
         
+        if let groups = data?.response.venue.listed?.groups?[0].items {
+            for item in 0...groups.count-1 {
+                let photoPrefix = groups[item].photo?.prefix ?? ""
+                let photoSuffix = groups[item].photo?.suffix ?? ""
+                let photo = photoPrefix + photoSuffix
+                photos.append(photo)
+            }
+        }
         
         if name == "" {
             print("Name is not found in data.")
@@ -107,7 +116,8 @@ struct DBHandler {
                 Constants.Database.addressField: address,
                 Constants.Database.ratingField: rating,
                 Constants.Database.timeField: time,
-                Constants.Database.daysField: days
+                Constants.Database.daysField: days,
+                Constants.Database.photoField: photos
                 ] as [String : Any]
         
         db.collection(Constants.Database.collectionName).addDocument(data: detail)

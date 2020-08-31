@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uBn-jn-KT7">
-    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -12,26 +13,26 @@
             <objects>
                 <viewController title="Select Location View Controller" id="BYZ-38-t0r" customClass="SelectLocationViewController" customModule="EatMudHo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="n0A-5C-vOi">
-                                <rect key="frame" x="35" y="138" width="344" height="234"/>
+                                <rect key="frame" x="35" y="94" width="305" height="234"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="今日邊度食？" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="014-ae-Iya">
-                                        <rect key="frame" x="96" y="0.0" width="152" height="30"/>
+                                        <rect key="frame" x="76.5" y="0.0" width="152" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="bottom" spacing="102" translatesAutoresizingMaskIntoConstraints="NO" id="TOc-PN-F80">
-                                        <rect key="frame" x="19" y="130" width="306" height="104"/>
+                                        <rect key="frame" x="0.0" y="130" width="305" height="104"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="8X5-yO-F66" userLabel="附近揀 Stack View">
-                                                <rect key="frame" x="0.0" y="0.0" width="102" height="104"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="8X5-yO-F66" userLabel="附近揀 Stack View">
+                                                <rect key="frame" x="0.0" y="0.0" width="101" height="104"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OgZ-Dp-cFb">
-                                                        <rect key="frame" x="16" y="0.0" width="70" height="70"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OgZ-Dp-cFb">
+                                                        <rect key="frame" x="15.5" y="0.0" width="70" height="70"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="70" id="P9r-gq-OBm"/>
                                                             <constraint firstAttribute="height" constant="70" id="aeV-Oz-NlC"/>
@@ -41,24 +42,24 @@
                                                             <action selector="currentBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sPa-Nl-JAD"/>
                                                         </connections>
                                                     </button>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="附近揀一間" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Dqj-DM-RfD">
-                                                        <rect key="frame" x="0.0" y="80" width="102" height="24"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="附近揀一間" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Dqj-DM-RfD">
+                                                        <rect key="frame" x="0.0" y="80" width="101" height="24"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="FR7-Al-brj" userLabel="自己揀 Stack View">
-                                                <rect key="frame" x="204" y="2" width="102" height="102"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="FR7-Al-brj" userLabel="自己揀 Stack View">
+                                                <rect key="frame" x="203" y="2" width="102" height="102"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="自己揀地點" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="ziH-8P-Wq0">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="自己揀地點" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="ziH-8P-Wq0">
                                                         <rect key="frame" x="0.0" y="0.0" width="102" height="24"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AI8-Df-FlH">
+                                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AI8-Df-FlH">
                                                         <rect key="frame" x="16" y="32" width="70" height="70"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="70" id="YWR-bZ-fj9"/>
@@ -95,7 +96,7 @@
             <objects>
                 <viewController title="Analysis View Controller" id="cof-Lv-kZO" customClass="AnalysisViewController" customModule="EatMudHo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="j4F-BZ-6dA">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="oMY-MW-O68"/>
@@ -111,38 +112,38 @@
             <objects>
                 <viewController title="Recommendation View Controller" id="xQd-x4-tdd" customClass="RecommendationViewController" customModule="EatMudHo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="feE-fO-NhA">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="wfU-lb-gQR" userLabel="Main Stack View">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="recommendFrame" translatesAutoresizingMaskIntoConstraints="NO" id="Ep5-yR-fUb">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="100" id="ePv-Jh-LGG"/>
                                         </constraints>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Dv6-qh-wk4" userLabel="今日推介 Stack View">
-                                        <rect key="frame" x="15" y="120" width="384" height="138"/>
+                                        <rect key="frame" x="15" y="120" width="345" height="138"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="今日推介" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="a0A-7Q-GhQ">
-                                                <rect key="frame" x="0.0" y="0.0" width="101.33333333333333" height="30"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="101.5" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="bNX-Y0-Xlj" userLabel="Image Stack View">
-                                                <rect key="frame" x="0.0" y="38" width="346" height="100"/>
+                                                <rect key="frame" x="0.0" y="38" width="345" height="100"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="79r-i9-rZZ">
-                                                        <rect key="frame" x="0.0" y="0.0" width="110" height="100"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="109.5" height="100"/>
                                                     </imageView>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="T1o-Eh-P2S">
-                                                        <rect key="frame" x="118" y="0.0" width="110" height="100"/>
+                                                        <rect key="frame" x="117.5" y="0.0" width="110" height="100"/>
                                                     </imageView>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CJL-Jm-s3o">
-                                                        <rect key="frame" x="236" y="0.0" width="110" height="100"/>
+                                                        <rect key="frame" x="235.5" y="0.0" width="109.5" height="100"/>
                                                     </imageView>
                                                 </subviews>
                                                 <constraints>
@@ -153,22 +154,22 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="vRb-0L-ndq" userLabel="區推介 Stack View">
-                                        <rect key="frame" x="15" y="278" width="384" height="618"/>
+                                        <rect key="frame" x="15" y="278" width="345" height="389"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="otF-La-weC">
-                                                <rect key="frame" x="0.0" y="0.0" width="379.33333333333331" height="618"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="345" height="389"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="151" translatesAutoresizingMaskIntoConstraints="NO" id="eEP-iI-DKN">
-                                                        <rect key="frame" x="0.0" y="0.0" width="379.33333333333331" height="30"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="345" height="20.5"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="九龍區 Top 3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="26r-kq-SH4">
-                                                                <rect key="frame" x="0.0" y="0.0" width="141.66666666666666" height="30"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="九龍區 Top 3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="26r-kq-SH4">
+                                                                <rect key="frame" x="0.0" y="0.0" width="107" height="20.5"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="其他地區？" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="eAd-Tq-IxE">
-                                                                <rect key="frame" x="292.66666666666669" y="0.0" width="86.666666666666686" height="30"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="其他地區？" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="eAd-Tq-IxE">
+                                                                <rect key="frame" x="258" y="0.0" width="87" height="20.5"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <color key="textColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -176,14 +177,14 @@
                                                         </subviews>
                                                     </stackView>
                                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="JwD-hB-Tca">
-                                                        <rect key="frame" x="17.333333333333343" y="50" width="345" height="568"/>
+                                                        <rect key="frame" x="0.0" y="40.5" width="345" height="348.5"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                         <prototypes>
                                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="fYR-cT-WnH">
-                                                                <rect key="frame" x="0.0" y="28" width="345" height="43.666667938232422"/>
+                                                                <rect key="frame" x="0.0" y="28" width="345" height="43.5"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fYR-cT-WnH" id="KUv-c5-238">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="345" height="43.666667938232422"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="345" height="43.5"/>
                                                                     <autoresizingMask key="autoresizingMask"/>
                                                                 </tableViewCellContentView>
                                                             </tableViewCell>
@@ -250,7 +251,7 @@
                     <tabBarItem key="tabBarItem" title="開餐" image="tuningfork" catalog="system" selectedImage="tuningfork" id="UlA-gb-HEi"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="c9Y-nl-cn1">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -267,95 +268,97 @@
             <objects>
                 <viewController title="Select Time View Controller" id="xzs-GV-ZTh" customClass="SelectTimeViewController" customModule="EatMudHo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Mrj-to-Dqu">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="你想幾點食？" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ld-aR-h49">
-                                <rect key="frame" x="131" y="142" width="152" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PCl-gb-de3">
+                                <rect key="frame" x="50" y="555" width="275" height="33"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <state key="normal" title="Start GENERATE">
+                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Breakfast" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="cGn-MU-uK0">
+                                <rect key="frame" x="100" y="54" width="175" height="78"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="0.0" height="0.0"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jYb-rz-LUq">
-                                <rect key="frame" x="153" y="330" width="86" height="51"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <state key="normal" title="Lunch"/>
-                                <connections>
-                                    <action selector="btnPressed:" destination="xzs-GV-ZTh" eventType="touchUpInside" id="aKb-sy-oTZ"/>
-                                </connections>
-                            </button>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceHorizontal="YES" pagingEnabled="YES" showsVerticalScrollIndicator="NO" indicatorStyle="black" canCancelContentTouches="NO" dataMode="prototypes" prefetchingEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ovd-6d-PDz">
+                                <rect key="frame" x="37.5" y="142" width="300" height="383"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="50" id="1ZR-or-8oP">
+                                    <size key="itemSize" width="300" height="350"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="timeCell" id="cXs-6W-lcN" customClass="timeCollectionViewCell" customModule="EatMudHo" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="16.5" width="300" height="350"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="dF2-UN-FiE">
+                                            <rect key="frame" x="0.0" y="0.0" width="300" height="350"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Breakfast" translatesAutoresizingMaskIntoConstraints="NO" id="KFD-Iw-kbj">
+                                                    <rect key="frame" x="0.0" y="0.0" width="300" height="350"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="KFD-Iw-kbj" firstAttribute="leading" secondItem="dF2-UN-FiE" secondAttribute="leading" id="9Uv-fo-C4w"/>
+                                                <constraint firstAttribute="bottom" secondItem="KFD-Iw-kbj" secondAttribute="bottom" id="Rdh-eV-mRj"/>
+                                                <constraint firstAttribute="trailing" secondItem="KFD-Iw-kbj" secondAttribute="trailing" id="aQ6-oP-eOw"/>
+                                                <constraint firstItem="KFD-Iw-kbj" firstAttribute="top" secondItem="dF2-UN-FiE" secondAttribute="top" id="r27-gt-8Gg"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="300" height="350"/>
+                                        <connections>
+                                            <outlet property="imageView" destination="KFD-Iw-kbj" id="wF3-b6-FER"/>
+                                            <outlet property="textLabel" destination="cGn-MU-uK0" id="R8A-g0-Uum"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="PCl-gb-de3" firstAttribute="leading" secondItem="QdB-qQ-u6e" secondAttribute="leading" constant="50" id="090-r4-t9u"/>
+                            <constraint firstItem="cGn-MU-uK0" firstAttribute="leading" secondItem="QdB-qQ-u6e" secondAttribute="leading" constant="100" id="4FU-IK-Ick"/>
+                            <constraint firstItem="Ovd-6d-PDz" firstAttribute="leading" secondItem="QdB-qQ-u6e" secondAttribute="leading" constant="37.5" id="BKL-sY-nZK"/>
+                            <constraint firstItem="Ovd-6d-PDz" firstAttribute="centerX" secondItem="Mrj-to-Dqu" secondAttribute="centerX" id="Gzl-Mt-lTt"/>
+                            <constraint firstItem="QdB-qQ-u6e" firstAttribute="trailing" secondItem="PCl-gb-de3" secondAttribute="trailing" constant="50" id="S0Y-5M-NKF"/>
+                            <constraint firstItem="Ovd-6d-PDz" firstAttribute="top" secondItem="cGn-MU-uK0" secondAttribute="bottom" constant="10" id="YOy-Fg-piH"/>
+                            <constraint firstItem="QdB-qQ-u6e" firstAttribute="bottom" secondItem="PCl-gb-de3" secondAttribute="bottom" constant="30" id="a5X-uB-faM"/>
+                            <constraint firstItem="Ovd-6d-PDz" firstAttribute="centerY" secondItem="Mrj-to-Dqu" secondAttribute="centerY" id="eWV-kF-fOy"/>
+                            <constraint firstItem="cGn-MU-uK0" firstAttribute="top" secondItem="QdB-qQ-u6e" secondAttribute="top" constant="10" id="foB-dS-YUe"/>
+                            <constraint firstItem="PCl-gb-de3" firstAttribute="top" secondItem="Ovd-6d-PDz" secondAttribute="bottom" constant="30" id="gK4-b8-9B1"/>
+                            <constraint firstItem="PCl-gb-de3" firstAttribute="centerX" secondItem="Mrj-to-Dqu" secondAttribute="centerX" id="pst-Zg-PC7"/>
+                            <constraint firstItem="QdB-qQ-u6e" firstAttribute="trailing" secondItem="cGn-MU-uK0" secondAttribute="trailing" constant="100" id="qQD-cY-fCz"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="QdB-qQ-u6e"/>
                     </view>
-                    <navigationItem key="navigationItem" id="RUO-Oc-zJU"/>
+                    <navigationItem key="navigationItem" title="你想幾點食？" id="RUO-Oc-zJU"/>
                     <connections>
+                        <outlet property="collectionView" destination="Ovd-6d-PDz" id="LJC-KR-Ole"/>
+                        <outlet property="flowLayout" destination="1ZR-or-8oP" id="Wcv-ep-OM3"/>
                         <segue destination="k7O-rJ-3xe" kind="show" identifier="TimeToType" id="rt3-ew-QUD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FMh-ew-ZIq" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1986.9565217391305" y="8.9673913043478262"/>
+            <point key="canvasLocation" x="1986.9565217391305" y="8.1521739130434785"/>
         </scene>
         <!--Select Type View Controller-->
         <scene sceneID="mNI-mz-ccS">
             <objects>
                 <viewController title="Select Type View Controller" id="k7O-rJ-3xe" customClass="SelectTypeViewController" customModule="EatMudHo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hkI-sk-iCr">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="mga-Pb-690">
-                                <rect key="frame" x="143.66666666666666" y="214" width="126.66666666666666" height="468"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="你想食乜？" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Qv-Ch-7oL">
-                                        <rect key="frame" x="0.0" y="0.0" width="126.66666666666667" height="30"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ti-On-bbS">
-                                        <rect key="frame" x="0.0" y="90" width="126.66666666666667" height="51"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                        <state key="normal" title="日本菜"/>
-                                        <connections>
-                                            <action selector="btnPressed:" destination="k7O-rJ-3xe" eventType="touchUpInside" id="I5L-lt-g8F"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zPv-fy-O7T">
-                                        <rect key="frame" x="0.0" y="201" width="126.66666666666667" height="51"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                        <state key="normal" title="亞洲菜"/>
-                                        <connections>
-                                            <action selector="btnPressed:" destination="k7O-rJ-3xe" eventType="touchUpInside" id="Y6u-EV-7Gf"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nys-4b-fpN">
-                                        <rect key="frame" x="0.0" y="312" width="126.66666666666667" height="51"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                        <state key="normal" title="廣東菜"/>
-                                        <connections>
-                                            <action selector="btnPressed:" destination="k7O-rJ-3xe" eventType="touchUpInside" id="xuO-1g-gwr"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XLP-ZD-I7I">
-                                        <rect key="frame" x="0.0" y="423" width="126.66666666666667" height="45"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="27"/>
-                                        <state key="normal" title="Generate"/>
-                                        <connections>
-                                            <action selector="generateBtnPressed:" destination="k7O-rJ-3xe" eventType="touchUpInside" id="UEB-UB-pLT"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
-                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="mga-Pb-690" firstAttribute="centerY" secondItem="hkI-sk-iCr" secondAttribute="centerY" id="jNg-Np-rSh"/>
-                            <constraint firstItem="mga-Pb-690" firstAttribute="centerX" secondItem="hkI-sk-iCr" secondAttribute="centerX" id="lVh-JS-ZbT"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Cw7-C1-xNk"/>
                     </view>
                     <navigationItem key="navigationItem" id="3DI-uO-3I3"/>
@@ -365,18 +368,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tiT-A3-Aze" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2826" y="6"/>
+            <point key="canvasLocation" x="2824.6376811594205" y="5.3571428571428568"/>
         </scene>
         <!--Loading Result View Controller-->
         <scene sceneID="pD2-P7-Jga">
             <objects>
                 <viewController id="91M-Sv-TXE" customClass="LoadingResultViewController" customModule="EatMudHo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="csU-Yq-XaG">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="幫緊你 幫緊你" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E7r-fs-J4d">
-                                <rect key="frame" x="35" y="138" width="344" height="30"/>
+                                <rect key="frame" x="35" y="94" width="305" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -404,11 +407,11 @@
             <objects>
                 <viewController id="o3W-TP-dOu" customClass="ResultViewController" customModule="EatMudHo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1fG-rx-jVA">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Testing" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kN0-CF-ZDV">
-                                <rect key="frame" x="35" y="144" width="344" height="36"/>
+                                <rect key="frame" x="35" y="100" width="305" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -432,6 +435,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Breakfast" width="1242" height="1335"/>
         <image name="chart.bar.fill" catalog="system" width="128" height="89"/>
         <image name="near" width="172" height="166"/>
         <image name="recommendFrame" width="800" height="296"/>

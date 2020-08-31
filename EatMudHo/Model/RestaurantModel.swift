@@ -24,6 +24,7 @@ struct Venue: Codable {
     let location: Location?
     let hours: Hours?
     let categories: [Categoies]
+    let listed: Listed? // which is photos
 }
 
 struct Categoies: Codable {
@@ -36,6 +37,8 @@ struct Location: Codable {
     let address: String
 }
 
+// MARK: - Opening hours fetching
+
 struct Hours: Codable {
     let timeframes: [TimeFrames]
 }
@@ -47,4 +50,23 @@ struct TimeFrames: Codable {
 
 struct OpenHour: Codable {
     let renderedTime: String?
+}
+
+// MARK: - Photo fetching
+
+struct Listed: Codable {
+    let groups: [Groups]?
+}
+
+struct Groups: Codable {
+    let items: [Items]
+}
+
+struct Items: Codable {
+    let photo: Photo?
+}
+
+struct Photo: Codable {
+    let prefix: String
+    let suffix: String
 }
