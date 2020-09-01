@@ -15,6 +15,8 @@
 		8323CBB224F3CD26000C1E97 /* APIRequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8323CBB124F3CD26000C1E97 /* APIRequestHandler.swift */; };
 		8343803524FA62DB00AD2DDF /* RestaurantModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8343803424FA62DB00AD2DDF /* RestaurantModel.swift */; };
 		834CC12824FA5F1F002E7846 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 834CC12724FA5F1F002E7846 /* GoogleService-Info.plist */; };
+		835F8D2324FEA5DE004EE8CA /* TimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835F8D2224FEA5DE004EE8CA /* TimeView.swift */; };
+		835F8D2524FEA602004EE8CA /* TimeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 835F8D2424FEA602004EE8CA /* TimeView.xib */; };
 		83784AAE24FAA5F400453474 /* DBHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83784AAD24FAA5F400453474 /* DBHandler.swift */; };
 		8395C9BB24FC0802005BCDD9 /* CategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8395C9BA24FC0802005BCDD9 /* CategoryModel.swift */; };
 		83A6D9A624F2991000046229 /* AnalysisViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A6D9A424F2991000046229 /* AnalysisViewController.swift */; };
@@ -28,7 +30,6 @@
 		83A8C8CA24F283CB007B02BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83A8C8C824F283CB007B02BA /* Main.storyboard */; };
 		83A8C8CC24F283CC007B02BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83A8C8CB24F283CC007B02BA /* Assets.xcassets */; };
 		83A8C8CF24F283CC007B02BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83A8C8CD24F283CC007B02BA /* LaunchScreen.storyboard */; };
-		83D2256B24FC0A6200D2BD0F /* timeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D2256A24FC0A6200D2BD0F /* timeCollectionViewCell.swift */; };
 		83D2256D24FC0B0900D2BD0F /* PhotoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D2256C24FC0B0900D2BD0F /* PhotoModel.swift */; };
 		83EE2A6824FAB5DF002359D3 /* SearchRestaurantModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EE2A6724FAB5DF002359D3 /* SearchRestaurantModel.swift */; };
 		83EE2A6A24FACD3A002359D3 /* DBModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EE2A6924FACD3A002359D3 /* DBModel.swift */; };
@@ -45,6 +46,8 @@
 		8323CBB124F3CD26000C1E97 /* APIRequestHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequestHandler.swift; sourceTree = "<group>"; };
 		8343803424FA62DB00AD2DDF /* RestaurantModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RestaurantModel.swift; path = "../../../../../../Chris/Desktop/Projects/EatMudHo-iOS/EatMudHo/Model/RestaurantModel.swift"; sourceTree = "<group>"; };
 		834CC12724FA5F1F002E7846 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		835F8D2224FEA5DE004EE8CA /* TimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TimeView.swift; path = "../../../../../../Chris/Desktop/Projects/EatMudHo-iOS/EatMudHo/View/TimeView.swift"; sourceTree = "<group>"; };
+		835F8D2424FEA602004EE8CA /* TimeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = TimeView.xib; path = "../../../../../../Chris/Desktop/Projects/EatMudHo-iOS/EatMudHo/View/TimeView.xib"; sourceTree = "<group>"; };
 		83784AAD24FAA5F400453474 /* DBHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBHandler.swift; sourceTree = "<group>"; };
 		8395C9BA24FC0802005BCDD9 /* CategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CategoryModel.swift; path = "../../../../../../Chris/Desktop/Projects/EatMudHo-iOS/EatMudHo/Model/CategoryModel.swift"; sourceTree = "<group>"; };
 		83A6D9A424F2991000046229 /* AnalysisViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AnalysisViewController.swift; path = "../../../../../../Chris/Desktop/Projects/EatMudHo-iOS/EatMudHo/Controller/AnalysisViewController.swift"; sourceTree = "<group>"; };
@@ -60,7 +63,6 @@
 		83A8C8CB24F283CC007B02BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		83A8C8CE24F283CC007B02BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		83A8C8D024F283CC007B02BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		83D2256A24FC0A6200D2BD0F /* timeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = timeCollectionViewCell.swift; path = "../../../../../../Chris/Desktop/Projects/EatMudHo-iOS/EatMudHo/Controller/timeCollectionViewCell.swift"; sourceTree = "<group>"; };
 		83D2256C24FC0B0900D2BD0F /* PhotoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PhotoModel.swift; path = "../../../../../../Chris/Desktop/Projects/EatMudHo-iOS/EatMudHo/Model/PhotoModel.swift"; sourceTree = "<group>"; };
 		83EE2A6724FAB5DF002359D3 /* SearchRestaurantModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchRestaurantModel.swift; path = "../../../../../../Chris/Desktop/Projects/EatMudHo-iOS/EatMudHo/Model/SearchRestaurantModel.swift"; sourceTree = "<group>"; };
 		83EE2A6924FACD3A002359D3 /* DBModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DBModel.swift; path = "../../../../../../Chris/Desktop/Projects/EatMudHo-iOS/EatMudHo/Model/DBModel.swift"; sourceTree = "<group>"; };
@@ -103,6 +105,8 @@
 				83A8C8C824F283CB007B02BA /* Main.storyboard */,
 				83A6D9AE24F2B49500046229 /* RegionRecommendTableViewCell.swift */,
 				83A6D9AF24F2B49500046229 /* RegionTableViewCell.xib */,
+				835F8D2224FEA5DE004EE8CA /* TimeView.swift */,
+				835F8D2424FEA602004EE8CA /* TimeView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -119,7 +123,6 @@
 				83A6D9AC24F2A43D00046229 /* RecommendationViewController.swift */,
 				8323CBAB24F3C795000C1E97 /* LoadingResultViewController.swift */,
 				8323CBAD24F3C7A0000C1E97 /* ResultViewController.swift */,
-				83D2256A24FC0A6200D2BD0F /* timeCollectionViewCell.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -233,6 +236,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				83A6D9B124F2B49500046229 /* RegionTableViewCell.xib in Resources */,
+				835F8D2524FEA602004EE8CA /* TimeView.xib in Resources */,
 				83A8C8CF24F283CC007B02BA /* LaunchScreen.storyboard in Resources */,
 				834CC12824FA5F1F002E7846 /* GoogleService-Info.plist in Resources */,
 				83A8C8CC24F283CC007B02BA /* Assets.xcassets in Resources */,
@@ -305,7 +309,7 @@
 				831E692224F2F63700F03EFC /* SelectTimeViewController.swift in Sources */,
 				83D2256D24FC0B0900D2BD0F /* PhotoModel.swift in Sources */,
 				8323CBB024F3CC2B000C1E97 /* APIRequest.swift in Sources */,
-				83D2256B24FC0A6200D2BD0F /* timeCollectionViewCell.swift in Sources */,
+				835F8D2324FEA5DE004EE8CA /* TimeView.swift in Sources */,
 				8323CBB224F3CD26000C1E97 /* APIRequestHandler.swift in Sources */,
 				83784AAE24FAA5F400453474 /* DBHandler.swift in Sources */,
 				8323CBAE24F3C7A0000C1E97 /* ResultViewController.swift in Sources */,

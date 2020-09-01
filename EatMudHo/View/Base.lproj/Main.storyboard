@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uBn-jn-KT7">
-    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -13,26 +12,26 @@
             <objects>
                 <viewController title="Select Location View Controller" id="BYZ-38-t0r" customClass="SelectLocationViewController" customModule="EatMudHo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="n0A-5C-vOi">
-                                <rect key="frame" x="35" y="94" width="305" height="234"/>
+                                <rect key="frame" x="35" y="138" width="344" height="234"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="今日邊度食？" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="014-ae-Iya">
-                                        <rect key="frame" x="76.5" y="0.0" width="152" height="30"/>
+                                        <rect key="frame" x="96" y="0.0" width="152" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="bottom" spacing="102" translatesAutoresizingMaskIntoConstraints="NO" id="TOc-PN-F80">
-                                        <rect key="frame" x="0.0" y="130" width="305" height="104"/>
+                                        <rect key="frame" x="19" y="130" width="306" height="104"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="8X5-yO-F66" userLabel="附近揀 Stack View">
-                                                <rect key="frame" x="0.0" y="0.0" width="101" height="104"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="8X5-yO-F66" userLabel="附近揀 Stack View">
+                                                <rect key="frame" x="0.0" y="0.0" width="102" height="104"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OgZ-Dp-cFb">
-                                                        <rect key="frame" x="15.5" y="0.0" width="70" height="70"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OgZ-Dp-cFb">
+                                                        <rect key="frame" x="16" y="0.0" width="70" height="70"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="70" id="P9r-gq-OBm"/>
                                                             <constraint firstAttribute="height" constant="70" id="aeV-Oz-NlC"/>
@@ -42,24 +41,24 @@
                                                             <action selector="currentBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sPa-Nl-JAD"/>
                                                         </connections>
                                                     </button>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="附近揀一間" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Dqj-DM-RfD">
-                                                        <rect key="frame" x="0.0" y="80" width="101" height="24"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="附近揀一間" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Dqj-DM-RfD">
+                                                        <rect key="frame" x="0.0" y="80" width="102" height="24"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="FR7-Al-brj" userLabel="自己揀 Stack View">
-                                                <rect key="frame" x="203" y="2" width="102" height="102"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="FR7-Al-brj" userLabel="自己揀 Stack View">
+                                                <rect key="frame" x="204" y="2" width="102" height="102"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="自己揀地點" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="ziH-8P-Wq0">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="自己揀地點" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="ziH-8P-Wq0">
                                                         <rect key="frame" x="0.0" y="0.0" width="102" height="24"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AI8-Df-FlH">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AI8-Df-FlH">
                                                         <rect key="frame" x="16" y="32" width="70" height="70"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="70" id="YWR-bZ-fj9"/>
@@ -96,7 +95,7 @@
             <objects>
                 <viewController title="Analysis View Controller" id="cof-Lv-kZO" customClass="AnalysisViewController" customModule="EatMudHo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="j4F-BZ-6dA">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="oMY-MW-O68"/>
@@ -112,38 +111,38 @@
             <objects>
                 <viewController title="Recommendation View Controller" id="xQd-x4-tdd" customClass="RecommendationViewController" customModule="EatMudHo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="feE-fO-NhA">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="wfU-lb-gQR" userLabel="Main Stack View">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="recommendFrame" translatesAutoresizingMaskIntoConstraints="NO" id="Ep5-yR-fUb">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="100" id="ePv-Jh-LGG"/>
                                         </constraints>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Dv6-qh-wk4" userLabel="今日推介 Stack View">
-                                        <rect key="frame" x="15" y="120" width="345" height="138"/>
+                                        <rect key="frame" x="15" y="120" width="384" height="138"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="今日推介" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="a0A-7Q-GhQ">
-                                                <rect key="frame" x="0.0" y="0.0" width="101.5" height="30"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="101.33333333333333" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="bNX-Y0-Xlj" userLabel="Image Stack View">
-                                                <rect key="frame" x="0.0" y="38" width="345" height="100"/>
+                                                <rect key="frame" x="0.0" y="38" width="346" height="100"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="79r-i9-rZZ">
-                                                        <rect key="frame" x="0.0" y="0.0" width="109.5" height="100"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="110" height="100"/>
                                                     </imageView>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="T1o-Eh-P2S">
-                                                        <rect key="frame" x="117.5" y="0.0" width="110" height="100"/>
+                                                        <rect key="frame" x="118" y="0.0" width="110" height="100"/>
                                                     </imageView>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CJL-Jm-s3o">
-                                                        <rect key="frame" x="235.5" y="0.0" width="109.5" height="100"/>
+                                                        <rect key="frame" x="236" y="0.0" width="110" height="100"/>
                                                     </imageView>
                                                 </subviews>
                                                 <constraints>
@@ -154,22 +153,22 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="vRb-0L-ndq" userLabel="區推介 Stack View">
-                                        <rect key="frame" x="15" y="278" width="345" height="389"/>
+                                        <rect key="frame" x="15" y="278" width="384" height="618"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="otF-La-weC">
-                                                <rect key="frame" x="0.0" y="0.0" width="345" height="389"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="379.33333333333331" height="618"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="151" translatesAutoresizingMaskIntoConstraints="NO" id="eEP-iI-DKN">
-                                                        <rect key="frame" x="0.0" y="0.0" width="345" height="20.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="379.33333333333331" height="30"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="九龍區 Top 3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="26r-kq-SH4">
-                                                                <rect key="frame" x="0.0" y="0.0" width="107" height="20.5"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="九龍區 Top 3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="26r-kq-SH4">
+                                                                <rect key="frame" x="0.0" y="0.0" width="141.66666666666666" height="30"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="其他地區？" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="eAd-Tq-IxE">
-                                                                <rect key="frame" x="258" y="0.0" width="87" height="20.5"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="其他地區？" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="eAd-Tq-IxE">
+                                                                <rect key="frame" x="292.66666666666669" y="0.0" width="86.666666666666686" height="30"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <color key="textColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -177,14 +176,14 @@
                                                         </subviews>
                                                     </stackView>
                                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="JwD-hB-Tca">
-                                                        <rect key="frame" x="0.0" y="40.5" width="345" height="348.5"/>
+                                                        <rect key="frame" x="17.333333333333343" y="50" width="345" height="568"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                         <prototypes>
                                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="fYR-cT-WnH">
-                                                                <rect key="frame" x="0.0" y="28" width="345" height="43.5"/>
+                                                                <rect key="frame" x="0.0" y="28" width="345" height="43.666667938232422"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fYR-cT-WnH" id="KUv-c5-238">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="345" height="43.5"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="345" height="43.666667938232422"/>
                                                                     <autoresizingMask key="autoresizingMask"/>
                                                                 </tableViewCellContentView>
                                                             </tableViewCell>
@@ -251,7 +250,7 @@
                     <tabBarItem key="tabBarItem" title="開餐" image="tuningfork" catalog="system" selectedImage="tuningfork" id="UlA-gb-HEi"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="c9Y-nl-cn1">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -268,83 +267,45 @@
             <objects>
                 <viewController title="Select Time View Controller" id="xzs-GV-ZTh" customClass="SelectTimeViewController" customModule="EatMudHo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Mrj-to-Dqu">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PCl-gb-de3">
-                                <rect key="frame" x="50" y="555" width="275" height="33"/>
+                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="keq-uz-OOk">
+                                <rect key="frame" x="187.66666666666666" y="736" width="39" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
-                                <state key="normal" title="Start GENERATE">
-                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                </state>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Breakfast" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="cGn-MU-uK0">
-                                <rect key="frame" x="100" y="54" width="175" height="78"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="25"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                                <size key="shadowOffset" width="0.0" height="0.0"/>
-                            </label>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceHorizontal="YES" pagingEnabled="YES" showsVerticalScrollIndicator="NO" contentInsetAdjustmentBehavior="scrollableAxes" indicatorStyle="black" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Ovd-6d-PDz">
-                                <rect key="frame" x="37.5" y="142" width="300" height="383"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="1ZR-or-8oP">
-                                    <size key="itemSize" width="300" height="350"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="timeCell" id="cXs-6W-lcN" customClass="timeCollectionViewCell" customModule="EatMudHo" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="16.5" width="300" height="350"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" insetsLayoutMarginsFromSafeArea="NO" id="dF2-UN-FiE">
-                                            <rect key="frame" x="0.0" y="0.0" width="300" height="350"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Breakfast" translatesAutoresizingMaskIntoConstraints="NO" id="KFD-Iw-kbj">
-                                                    <rect key="frame" x="0.0" y="0.0" width="300" height="350"/>
-                                                </imageView>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="KFD-Iw-kbj" firstAttribute="leading" secondItem="dF2-UN-FiE" secondAttribute="leading" id="0w6-5S-Zhp"/>
-                                                <constraint firstItem="KFD-Iw-kbj" firstAttribute="top" secondItem="dF2-UN-FiE" secondAttribute="top" id="637-rb-XEg"/>
-                                                <constraint firstAttribute="bottom" secondItem="KFD-Iw-kbj" secondAttribute="bottom" id="ZQQ-gV-p6a"/>
-                                                <constraint firstAttribute="trailing" secondItem="KFD-Iw-kbj" secondAttribute="trailing" id="usc-Uu-9SF"/>
-                                            </constraints>
-                                        </collectionViewCellContentView>
-                                        <connections>
-                                            <outlet property="imageView" destination="KFD-Iw-kbj" id="wF3-b6-FER"/>
-                                            <outlet property="textLabel" destination="cGn-MU-uK0" id="R8A-g0-Uum"/>
-                                        </connections>
-                                    </collectionViewCell>
-                                </cells>
-                            </collectionView>
+                                <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="currentPageIndicatorTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </pageControl>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aO4-4U-GTv">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="aO4-4U-GTv" secondAttribute="bottom" id="6Gy-mw-CO4"/>
+                            <constraint firstAttribute="trailing" secondItem="aO4-4U-GTv" secondAttribute="trailing" id="Izt-9j-0YQ"/>
+                            <constraint firstItem="aO4-4U-GTv" firstAttribute="leading" secondItem="Mrj-to-Dqu" secondAttribute="leading" id="VY2-yA-0HM"/>
+                            <constraint firstItem="aO4-4U-GTv" firstAttribute="top" secondItem="Mrj-to-Dqu" secondAttribute="top" id="b9e-Qh-y4q"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="QdB-qQ-u6e"/>
                     </view>
                     <navigationItem key="navigationItem" title="你想幾點食？" id="RUO-Oc-zJU"/>
                     <connections>
-                        <outlet property="collectionView" destination="Ovd-6d-PDz" id="LJC-KR-Ole"/>
-                        <outlet property="flowLayout" destination="1ZR-or-8oP" id="Wcv-ep-OM3"/>
+                        <outlet property="pageControl" destination="keq-uz-OOk" id="jRR-7p-lfN"/>
+                        <outlet property="scrollView" destination="aO4-4U-GTv" id="5jQ-ec-jE0"/>
                         <segue destination="k7O-rJ-3xe" kind="show" identifier="TimeToType" id="rt3-ew-QUD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FMh-ew-ZIq" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1986.9565217391305" y="8.1521739130434785"/>
+            <point key="canvasLocation" x="1985.5072463768117" y="7.3660714285714279"/>
         </scene>
         <!--Select Type View Controller-->
         <scene sceneID="mNI-mz-ccS">
             <objects>
                 <viewController title="Select Type View Controller" id="k7O-rJ-3xe" customClass="SelectTypeViewController" customModule="EatMudHo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hkI-sk-iCr">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="Cw7-C1-xNk"/>
@@ -363,11 +324,11 @@
             <objects>
                 <viewController id="91M-Sv-TXE" customClass="LoadingResultViewController" customModule="EatMudHo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="csU-Yq-XaG">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="幫緊你 幫緊你" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E7r-fs-J4d">
-                                <rect key="frame" x="35" y="94" width="305" height="30"/>
+                                <rect key="frame" x="35" y="138" width="344" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -395,11 +356,11 @@
             <objects>
                 <viewController id="o3W-TP-dOu" customClass="ResultViewController" customModule="EatMudHo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1fG-rx-jVA">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Testing" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kN0-CF-ZDV">
-                                <rect key="frame" x="35" y="100" width="305" height="36"/>
+                                <rect key="frame" x="35" y="144" width="344" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -423,7 +384,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Breakfast" width="1242" height="1335"/>
         <image name="chart.bar.fill" catalog="system" width="128" height="89"/>
         <image name="near" width="172" height="166"/>
         <image name="recommendFrame" width="800" height="296"/>

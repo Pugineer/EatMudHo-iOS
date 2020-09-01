@@ -8,47 +8,48 @@
 
 import UIKit
 import LNICoverFlowLayout
-class SelectTimeViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+class SelectTimeViewController: UIViewController {
     
-    let sectionInsets = UIEdgeInsets(top: 50, left: 20, bottom: 50, right: 20)
-    @IBOutlet var collectionView: UICollectionView!
-    @IBOutlet var flowLayout: UICollectionViewFlowLayout!
-    var apiRequestHandler: APIRequestHandler?
+    @IBOutlet var pageControl: UIPageControl!
+    @IBOutlet var scrollView: UIScrollView!
+    var pageDatasource: [TimeView] = []
+    func geneatePage() {
+        for item in 0...photoModelDatasource.count-1 {
+            let photoModel = photoModelDatasource[item]
+            let page: TimeView = Bundle.main.loadNibNamed("TimeView", owner: self, options: nil)?.first as! TimeView
+            page.imageView.image = photoModel.image
+            page.textLabel.text = photoModel.imageDescription
+            pageDatasource.append(page)
+        }
+    }
     var photoModelDatasource = [
-            PhotoModel(image: UIImage(named: Constants.Image.breakfastImage)!, imageDescription: "Breakfast"),
-            PhotoModel(image: UIImage(named: Constants.Image.lunchImage)!, imageDescription: "Lunch"),
-            PhotoModel(image: UIImage(named: Constants.Image.afternoonTeaImage)!, imageDescription: "Afternoon tea"),
-            PhotoModel(image: UIImage(named: Constants.Image.dinnerImage)!, imageDescription: "Dinner"),
-            PhotoModel(image: UIImage(named: Constants.Image.supperImage)!, imageDescription: "Supper"),
-    ]
+        PhotoModel(image: UIImage(named: "Breakfast")!, imageDescription: "breakfast"),
+        PhotoModel(image: UIImage(named: "Lunch")!, imageDescription: "lunch"),
+        PhotoModel(image: UIImage(named: "AfternoonTea")!, imageDescription: "afternoon tea"),
+        PhotoModel(image: UIImage(named: "Dinner")!, imageDescription: "dinner"),
+        PhotoModel(image: UIImage(named: "Supper")!, imageDescription: "supper")]
     
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        print(photoModelDatasource.count)
-        return photoModelDatasource.count
+    func setupScrollView(pages: [TimeView]) {
+        scrollView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height)
+        scrollView.contentSize = CGSize(width: view.frame.width * CGFloat(pages.count), height: 200)
+        scrollView.isPagingEnabled = true
+        
+        for page in 0...pages.count-1 {
+            pages[page].frame = CGRect(x: view.frame.width * CGFloat(page), y: 0, width: view.frame.width, height: view.frame.height)
+            scrollView.addSubview(pages[page])
+        }
     }
-    
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.timeCellReuseIdentifier, for: indexPath) as! timeCollectionViewCell
-        let photoModel = photoModelDatasource[indexPath.row]
-        print("index:" + String(indexPath.row))
-        cell.imageView.image = photoModel.image
-        cell.textLabel.text! = photoModel.imageDescription
-        cell.imageView.layer.cornerRadius = 20
-        return cell
-    }
-    
+    var apiRequestHandler: APIRequestHandler?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        collectionView.dataSource = self
-        collectionView.backgroundColor = UIColor.white
-        // Do any additional setup after loading the view.
+        geneatePage()
+        scrollView.delegate = self
+        view.bringSubviewToFront(pageControl)
+        setupScrollView(pages: pageDatasource)
+        pageControl.numberOfPages = pageDatasource.count
+        pageControl.currentPage = 0
     }
-    
     // MARK: - IBAction
     
     @IBAction func btnPressed(_ sender: UIButton) {
@@ -71,4 +72,11 @@ class SelectTimeViewController: UIViewController, UICollectionViewDataSource, UI
     }
     
     
+}
+
+extension SelectTimeViewController: UIScrollViewDelegate {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let pageIndex = round(scrollView.contentOffset.x/view.frame.width)
+        pageControl.currentPage = Int(pageIndex)
+    }
 }
