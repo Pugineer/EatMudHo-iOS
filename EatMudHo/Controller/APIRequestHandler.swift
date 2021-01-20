@@ -29,15 +29,6 @@ struct APIRequestHandler {
         apiRequest.category?.append(categoryID)
     }
     
-    mutating func setMode() {
-        if apiRequest.category!.count == 1 {
-            apiRequest.mode = "Single"
-        }
-        else if apiRequest.category!.count == 3 {
-            apiRequest.mode = "Multi"
-        }
-    }
-    
     func getMode() -> String? {
         return apiRequest.mode
     }
@@ -100,21 +91,10 @@ struct APIRequestHandler {
     func generateResult() {
         DispatchQueue.global(qos: .background).async {
             var resultArray: Array<SearchRestaurantModel> = []
-            if self.apiRequest.mode == "Single" {
                 let urlString = self.createURLString(categoryID: self.apiRequest.category?.first, limit: 50, radius: 2500)
                 let result = self.performRequest(urlString: urlString)
                 resultArray.append(result!)
                 self.delegate?.didFinishGeneratingData(data: resultArray)
-            }
-            else if self.apiRequest.mode == "Multi" {
-                for item in 0...2 {
-                    let urlString = self.createURLString(categoryID: self.apiRequest.category?[item], limit: 50, radius: 2500)
-                    let result = self.performRequest(urlString: urlString)
-                    resultArray.append(result!)
-                }
-                self.delegate?.didFinishGeneratingData(data: resultArray)
-            }
-            
         }
     }
     

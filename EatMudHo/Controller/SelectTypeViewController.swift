@@ -25,7 +25,6 @@ class SelectTypeViewController: UIViewController {
     }
     
     @IBAction func generateBtnPressed(_ sender: UIButton) {
-        apiRequestHandler?.setMode()
         performSegue(withIdentifier: Constants.typeToLoadingSegue, sender: self) 
         
     }

@@ -23,11 +23,11 @@ class SelectTimeViewController: UIViewController {
         }
     }
     var photoModelDatasource = [
-        PhotoModel(image: UIImage(named: "Breakfast")!, imageDescription: "breakfast"),
-        PhotoModel(image: UIImage(named: "Lunch")!, imageDescription: "lunch"),
-        PhotoModel(image: UIImage(named: "AfternoonTea")!, imageDescription: "afternoon tea"),
-        PhotoModel(image: UIImage(named: "Dinner")!, imageDescription: "dinner"),
-        PhotoModel(image: UIImage(named: "Supper")!, imageDescription: "supper")]
+        PhotoModel(image: #imageLiteral(resourceName: "breakfast"), imageDescription: "breakfast"),
+        PhotoModel(image: #imageLiteral(resourceName: "lunch"), imageDescription: "lunch"),
+        PhotoModel(image: #imageLiteral(resourceName: "AfternoonTea"), imageDescription: "afternoon tea"),
+        PhotoModel(image: #imageLiteral(resourceName: "dinner"), imageDescription: "dinner"),
+        PhotoModel(image: #imageLiteral(resourceName: "supper"), imageDescription: "supper")]
     
     func setupScrollView(pages: [TimeView]) {
         scrollView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height)
@@ -49,27 +49,26 @@ class SelectTimeViewController: UIViewController {
         setupScrollView(pages: pageDatasource)
         pageControl.numberOfPages = pageDatasource.count
         pageControl.currentPage = 0
+        let btn = UIBarButtonItem(title: "Confirm", style: .done, target: self, action: #selector(btnPressed(_:)))
+        self.navigationItem.setRightBarButton(btn, animated: true)
     }
     // MARK: - IBAction
     
-    @IBAction func btnPressed(_ sender: UIButton) {
-        if sender.titleLabel?.text == "Lunch" {
+    @objc func btnPressed(_ sender: UIButton) {
             let time = 1200
             apiRequestHandler?.setTime(with: time)
-            performSegue(withIdentifier: Constants.timeToTypeSegue, sender: self)
-        }
+            performSegue(withIdentifier: "timeToLoad", sender: self)
+        
     }
     
     // MARK: - Navigation
     
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == Constants.timeToTypeSegue {
-            let destVC = segue.destination as! SelectTypeViewController
-            destVC.apiRequestHandler = apiRequestHandler
-            
-        }
+        let destVC = segue.destination as! LoadingResultViewController
+        destVC.apiRequestHandler = apiRequestHandler
     }
+    
     
     
 }

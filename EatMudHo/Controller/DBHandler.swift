@@ -8,6 +8,7 @@
 
 import Foundation
 import Firebase
+import FirebaseFirestore
 struct DBHandler {
     var db = Firestore.firestore()
     var restaurantID: String?
